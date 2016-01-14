@@ -82,11 +82,7 @@ app.post('/animals/new',function(req,res){
 
 //update a single animal
 app.post('/animals/:id',function(req,res){
-	var animal = new Animal(
-							{name: req.body.name,
-							lives:req.body.lives,
-							legs:req.body.legs}
-							);
+
 	Animal.update(
 					{_id:req.params.id},
 					{
