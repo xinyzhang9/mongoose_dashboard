@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>index</title>
+<style>
+    #res{
+        color: red;
+    }
+    #playground{
+        text-align: center;
+        margin: 0 auto;
+    }
+    input{
+        margin: 5px;
+    }
+
+</style>
+<!--     <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+        })
+    </script>
+</head>
+<body>
+    <div id = 'errors'></div>
+    <div id = 'playground'>
+    <fieldset>
+        <legend>Animal List</legend>
+        <form action="/animals/new_page">
+            <input type="submit" value = "add new animal">
+        </form>
+        <% if(typeof(animals) != 'undefined' ) { %>
+            <% for(x in animals){ %>
+                <h4><%= animals[x].name %></h4>
+                <h4>updated at: <%= animals[x].updated_at %></h4>
+
+                <form action="/animals/<%=animals[x]._id%>">
+                    <input type="submit" value = 'display information'>
+                </form> 
+
+                <form action="/animals/<%=animals[x]._id%>/edit">
+                    <input type="submit" value = 'edit information'>
+                </form>
+
+                <form action="/animals/<%=animals[x]._id%>/destroy">
+                    <input type="submit" value = 'remove animal'>
+                </form>
+                <hr>
+
+        <% } %>
+    <% } %>
+    </fieldset>
+
+        
+    </div>
+
+</body>
+</html><br>

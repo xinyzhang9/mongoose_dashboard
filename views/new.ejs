@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>index</title>
+<style>
+    #res{
+        color: red;
+    }
+    #playground{
+        text-align: center;
+        margin: 0 auto;
+    }
+    input{
+        margin: 5px;
+    }
+
+</style>
+<!--     <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+        })
+    </script>
+</head>
+<body>
+    <div id = 'errors'></div>
+    <div id = 'playground'>
+    <fieldset>
+        <legend>Add new animal</legend>
+        <form action="/animals/new" method = "post">
+            <label for="name">animal name:</label>
+            <input type="text" name = 'name'><br>
+            <label for="lives">lives:</label>
+            <input type="text" name = 'lives'><br>
+            <label for="legs">number of legs:</label>
+            <input type="text" name = 'legs'><br>
+            <input type="submit" value = "add animal!">
+        </form>
+        <form action="/">
+            <input type="submit" value = 'return to animal list!'>
+        </form>
+    </fieldset>
+
+        
+    </div>
+
+</body>
+</html><br>

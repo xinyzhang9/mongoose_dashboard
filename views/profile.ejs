@@ -1,0 +1,20 @@
+<html>
+<body>
+    <h2>Profile</h2>
+
+    <form action="/" method = 'post'>
+    	<input type="submit" value = 'back to animal list!'>
+    </form>
+    <hr>
+        <form action="/animals/<%=animal._id%>" method = "post">
+            <label for="name">animal name:</label>
+            <input type="text" name = 'name' value = '<%=animal.name%>'><br>
+            <label for="lives">lives:</label>
+            <input type="text" name = 'lives' value = '<%=animal.lives%>'><br>
+            <label for="legs">number of legs:</label>
+            <input type="text" name = 'legs' value = '<%=animal.legs%>'><br>
+<!--             <input type="hidden" name = '_id' value = '<%=animal._id%>'> -->
+            <input type="submit" value = "edit animal!">
+        </form>
+</body>
+</html>

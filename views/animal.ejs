@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Animal</title>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <h1>Show the <em><%= animal.name %></em> Document</h1>
+
+    <p><strong>Name:</strong> <%= animal.name %></p>
+    <p><strong>Lives in :</strong> <%= animal.lives %></p>
+    <p><strong>has </strong> <%= animal.legs %> legs</p>
+
+    <p><a href="/animals/<%= animal._id %>/edit">Update animal information</a><br>
+        <a href="/animals/<%= animal._id %>/destroy">Delete animal</a></p>
+
+    <p>&nbsp;</p>
+    <p><a href="/">Go Home</a></p>
+
+</div>
+
+</body>
+</html>
